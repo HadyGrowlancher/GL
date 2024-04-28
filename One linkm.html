@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Link</title>
+</head>
+<body>
+
+<h2>Enter Password to Open the Link</h2>
+
+<form onsubmit="checkPassword(); return false;">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+    function checkPassword() {
+        var password = document.getElementById("password").value;
+        // Replace "password123" with your desired password
+        if (password === "Gl123") {
+            window.location.href = "https://www.mediafire.com/file/s42rc2tgr9r9ab7/GrowLauncher_v6.0.25.apk/file"; // Replace with your desired link
+        } else {
+            document.getElementById("message").textContent = "Incorrect password. Please try again.";
+        }
+    }
+</script>
+
+</body>
+</html>
