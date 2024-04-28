@@ -2,15 +2,41 @@
 <html>
 <head>
     <title>Protected Link</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input[type=password] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #message {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Enter Password to Open the Link</h1>
+<h2>Enter Password to Open the Link</h2>
 
-<form onsubmit="checkPassword(); return false;"></form></h1>
-    <h1 label for="password">Password:</label></h1>
-    <h1 input type="password" id="password" name="password">
-    <h1 button type="submit">Submit</button></h1>
+<form onsubmit="checkPassword(); return false;">
+    <input type="password" id="password" name="password" placeholder="Password">
+    <button type="submit">Submit</button>
 </form>
 
 <p id="message"></p>
@@ -18,9 +44,8 @@
 <script>
     function checkPassword() {
         var password = document.getElementById("password").value;
-        // Replace "password123" with your desired password
-        if (password === "Gl123") {
-            window.location.href = "https://www.mediafire.com/file/ayyj21o4280oro2/GrowLauncher_v6.0.26.apk/file"; // Replace with your desired link
+        if (password === "gl123") {
+            window.location.href = "https://www.mediafire.com/file/ayyj21o4280oro2/GrowLauncher_v6.0.26.apk/file";
         } else {
             document.getElementById("message").textContent = "Incorrect password. Please try again.";
         }
